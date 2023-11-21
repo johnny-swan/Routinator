@@ -9,9 +9,16 @@ import Foundation
 
 class ChoresDataManager {
     private var items:[Chore] = []
-    let debug = true
+    var debug = true
+    var routine: Routine?
+    
+    init(routine: Routine?, debug:Bool = false) {
+        self.routine = routine
+        self.debug = debug
+    }
     
     func fetch() {
+        items.removeAll()
         if debug {
             // find this date
             let calendar = Calendar(identifier: .gregorian)
@@ -28,7 +35,7 @@ class ChoresDataManager {
                 items.append(chore)
             }
         } else {
-            if let file = Bundle.main.url(forResource: "debug", withExtension: "json") {
+            if let file = Bundle.main.url(forResource: routine!.name!, withExtension: "json") {
                 do {
                     let data = try Data(contentsOf: file)
                     let chores = try JSONDecoder().decode([Chore].self, from: data)

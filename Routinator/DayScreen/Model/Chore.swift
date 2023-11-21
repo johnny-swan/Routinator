@@ -14,6 +14,24 @@ class Chore: Decodable {
     var timeStart: Int?
     var duration: Int?
     var timeEnd: Int? { timeStart! + duration! }
+    
+    var timeStartValue:Date? {
+        if let minutes = timeStart {
+            let calendar = Calendar.current
+            let startOfDay = calendar.startOfDay(for: Date())
+            let time = startOfDay.addingTimeInterval(TimeInterval(60*minutes))
+        return time
+        } else { return nil }
+    }
+    
+    var timeEndValue:Date? {
+        if let minutes = timeEnd {
+            let calendar = Calendar.current
+            let startOfDay = calendar.startOfDay(for: Date())
+            let time = startOfDay.addingTimeInterval(TimeInterval(60*minutes))
+        return time
+        } else { return nil }
+    }
  
     init(name: String, desc: String = "", timeStart: Int, duration: Int) {
         self.name = name
@@ -31,8 +49,7 @@ class Chore: Decodable {
             let currentHour = calendar.component(.hour, from: time)
             let currentMinute = calendar.component(.minute, from: time)
             return String(format: "%02d:%02d", currentHour, currentMinute)
-        }
-        else {return "--:--"}
+        } else { return "--:--" }
     }
     
     var timeLeft: Int? {

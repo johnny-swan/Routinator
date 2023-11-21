@@ -14,7 +14,11 @@ class DayViewController: UIViewController {
     @IBOutlet weak var lblMyDay: UILabel!
     
     let notificator = Notificator()
-    let manager = ChoresDataManager()
+    
+    let manager = ChoresDataManager(routine: nil, debug: true)
+    
+    
+    
     var currentChore: Int? {
         willSet { print("new currentChore will set") }
         didSet { setNewChore(oldValue: oldValue ?? 0, newValue: currentChore!) }
@@ -27,14 +31,13 @@ class DayViewController: UIViewController {
         currentChore = getCurrentIndex()
         
         initialize()
-        print("current cell is: \(currentChore!)")
        
     }
 
     func setNewChore(oldValue: Int, newValue: Int) {
         print("new chore set\nit was \(oldValue) and now it is \(newValue)")
         let newChore = manager.chore(atInt: newValue)
-        notificator.createN(task: newChore.name!, timeInterval: 5)
+//        notificator.createN(task: newChore.name!, timeInterval: 5)
         
     }
     

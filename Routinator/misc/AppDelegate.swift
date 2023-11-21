@@ -45,11 +45,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
-        print("App now is in background")
+//        print("App now is in background")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        print("App now is ready to go to background")
+//        print("App now is ready to go to background")
     }
 
 }
@@ -65,19 +65,15 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
         // You can customize the presentation options here
         // For example, to display an alert and play a sound:
-        completionHandler([.list, .banner])
+//        completionHandler([.list, .banner])
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         // Perform the background task here
-        print("Background task triggered by silent notification")
-
-        // Call the completion handler when the background task is complete
-        completionHandler(.newData)
+//        print("Background task triggered by silent notification")
+//
+//        // Call the completion handler when the background task is complete
+//        completionHandler(.newData)
     }
-}
-
-func test() {
-    print("the test")
 }
 

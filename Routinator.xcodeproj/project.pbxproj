@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		B2170EB72AFC2CA7007FD342 /* debug.json in Resources */ = {isa = PBXBuildFile; fileRef = B2170EB62AFC2CA7007FD342 /* debug.json */; };
 		B2170EBB2AFC3B97007FD342 /* Notificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2170EBA2AFC3B97007FD342 /* Notificator.swift */; };
+		B27999432B0B79000051F4C8 /* EditableChoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27999422B0B79000051F4C8 /* EditableChoreCell.swift */; };
+		B2825FC12B00C453007D9DE5 /* RoutineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2825FC02B00C453007D9DE5 /* RoutineTableViewController.swift */; };
+		B2825FC42B0161A0007D9DE5 /* routines.json in Resources */ = {isa = PBXBuildFile; fileRef = B2825FC32B0161A0007D9DE5 /* routines.json */; };
+		B2825FC72B016471007D9DE5 /* RoutineDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2825FC62B016471007D9DE5 /* RoutineDataManager.swift */; };
+		B2825FCA2B01648D007D9DE5 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2825FC92B01648D007D9DE5 /* Routine.swift */; };
+		B2825FD42B041AA0007D9DE5 /* AddRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2825FD32B041AA0007D9DE5 /* AddRoutineViewController.swift */; };
+		B2825FD82B06AF6A007D9DE5 /* EditRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2825FD72B06AF6A007D9DE5 /* EditRoutineViewController.swift */; };
 		B2A1239B2AF7E5600085D288 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A1239A2AF7E5600085D288 /* AppDelegate.swift */; };
 		B2A1239D2AF7E5600085D288 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A1239C2AF7E5600085D288 /* SceneDelegate.swift */; };
 		B2A123A22AF7E5600085D288 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A123A02AF7E5600085D288 /* Main.storyboard */; };
@@ -25,6 +32,13 @@
 /* Begin PBXFileReference section */
 		B2170EB62AFC2CA7007FD342 /* debug.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = debug.json; sourceTree = "<group>"; };
 		B2170EBA2AFC3B97007FD342 /* Notificator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificator.swift; sourceTree = "<group>"; };
+		B27999422B0B79000051F4C8 /* EditableChoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableChoreCell.swift; sourceTree = "<group>"; };
+		B2825FC02B00C453007D9DE5 /* RoutineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineTableViewController.swift; sourceTree = "<group>"; };
+		B2825FC32B0161A0007D9DE5 /* routines.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = routines.json; sourceTree = "<group>"; };
+		B2825FC62B016471007D9DE5 /* RoutineDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDataManager.swift; sourceTree = "<group>"; };
+		B2825FC92B01648D007D9DE5 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
+		B2825FD32B041AA0007D9DE5 /* AddRoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoutineViewController.swift; sourceTree = "<group>"; };
+		B2825FD72B06AF6A007D9DE5 /* EditRoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRoutineViewController.swift; sourceTree = "<group>"; };
 		B2A123972AF7E5600085D288 /* Routinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Routinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A1239A2AF7E5600085D288 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2A1239C2AF7E5600085D288 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +73,36 @@
 			path = Working;
 			sourceTree = "<group>";
 		};
+		B27999412B0B78D70051F4C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B27999422B0B79000051F4C8 /* EditableChoreCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2825FBE2B00C41D007D9DE5 /* Routines */ = {
+			isa = PBXGroup;
+			children = (
+				B27999412B0B78D70051F4C8 /* View */,
+				B2825FBF2B00C430007D9DE5 /* Model */,
+				B2825FC02B00C453007D9DE5 /* RoutineTableViewController.swift */,
+				B2825FD32B041AA0007D9DE5 /* AddRoutineViewController.swift */,
+				B2825FD72B06AF6A007D9DE5 /* EditRoutineViewController.swift */,
+			);
+			path = Routines;
+			sourceTree = "<group>";
+		};
+		B2825FBF2B00C430007D9DE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2825FC32B0161A0007D9DE5 /* routines.json */,
+				B2825FC62B016471007D9DE5 /* RoutineDataManager.swift */,
+				B2825FC92B01648D007D9DE5 /* Routine.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B2A1238E2AF7E5600085D288 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +122,7 @@
 		B2A123992AF7E5600085D288 /* Routinator */ = {
 			isa = PBXGroup;
 			children = (
+				B2825FBE2B00C41D007D9DE5 /* Routines */,
 				B2A123A82AF7E5620085D288 /* Info.plist */,
 				B2A123B12AF7E5C10085D288 /* DayScreen */,
 				B2A123AF2AF7E5A50085D288 /* misc */,
@@ -185,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2825FC42B0161A0007D9DE5 /* routines.json in Resources */,
 				B2A123B92AF7E9740085D288 /* weekday_tt.json in Resources */,
 				B2A123A72AF7E5620085D288 /* LaunchScreen.storyboard in Resources */,
 				B2A123A42AF7E5620085D288 /* Assets.xcassets in Resources */,
@@ -201,11 +247,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2A1239B2AF7E5600085D288 /* AppDelegate.swift in Sources */,
+				B2825FD82B06AF6A007D9DE5 /* EditRoutineViewController.swift in Sources */,
+				B2825FC72B016471007D9DE5 /* RoutineDataManager.swift in Sources */,
+				B27999432B0B79000051F4C8 /* EditableChoreCell.swift in Sources */,
 				B2A123C02AF7F81A0085D288 /* DataManager.swift in Sources */,
 				B2A123C32AF7F85B0085D288 /* Chore.swift in Sources */,
 				B2A1239D2AF7E5600085D288 /* SceneDelegate.swift in Sources */,
 				B2A123BD2AF7F1E50085D288 /* DayViewController.swift in Sources */,
 				B2A123C72AF835B30085D288 /* FutureCellView.swift in Sources */,
+				B2825FCA2B01648D007D9DE5 /* Routine.swift in Sources */,
+				B2825FC12B00C453007D9DE5 /* RoutineTableViewController.swift in Sources */,
+				B2825FD42B041AA0007D9DE5 /* AddRoutineViewController.swift in Sources */,
 				B2170EBB2AFC3B97007FD342 /* Notificator.swift in Sources */,
 				B2A123CC2AF83C430085D288 /* CurrentCellView.swift in Sources */,
 			);
