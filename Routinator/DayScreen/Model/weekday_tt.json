@@ -1,68 +1,134 @@
 [
     {
         "name": "Waking up",
-        "timeStart": 390,
-        "duration": 0,
+        "timeStart": {
+            "hours": 16,
+            "minutes": 30
+        },
+        "duration": {
+            "hours": 0,
+            "minutes": 30
+        },
         "desc": "Get the fuck up your lazy body from the bed"
     },
     {
         "name": "Morning bath",
-        "timeStart": 390,
-        "duration": 30,
+        "timeStart": {
+            "hours": 7,
+            "minutes": 0
+        },
+        "duration": {
+            "hours": 0,
+            "minutes": 30
+        },
         "desc": "Clean the fuck your lazy body from the night gunk"
     },
     {
         "name": "Breakfast",
-        "timeStart": 420,
-        "duration": 30,
+        "timeStart": {
+            "hours": 7,
+            "minutes": 30
+        },
+        "duration": {
+            "hours": 0,
+            "minutes": 30
+        },
         "desc": "Feed the fuck your lazy body with some protein and sugars"
     },
     {
         "name": "Commute",
-        "timeStart": 450,
-        "duration": 20,
+        "timeStart": {
+            "hours": 8,
+            "minutes": 0
+        },
+        "duration": {
+            "hours": 0,
+            "minutes": 30
+        },
         "desc": "Get the fuck your lazy body to the office with your fucking bicycle"
     },
     {
         "name": "Work",
-        "timeStart": 470,
-        "duration": 540,
+        "timeStart": {
+            "hours": 8,
+            "minutes": 30
+        },
+        "duration": {
+            "hours": 0,
+            "minutes": 30
+        },
         "desc": "Get the fuck some money to continue your fucking life"
     },
     {
         "name": "Commute home",
-        "timeStart": 1010,
-        "duration": 20,
+        "timeStart": {
+            "hours": 9,
+            "minutes": 30
+        },
+        "duration": {
+            "hours": 0,
+            "minutes": 30
+        },
         "desc": "Get the fuck your lazy body back to the home with your fucking bicycle"
     },
     {
         "name": "Dinner",
-        "timeStart": 1030,
-        "duration": 60,
+        "timeStart": {
+            "hours": 10,
+            "minutes": 0
+        },
+        "duration": {
+            "hours": 0,
+            "minutes": 30
+        },
         "desc": "Get the fuck some money to continue your fucking life"
     },
     {
         "name": "Work after work",
-        "timeStart": 1090,
-        "duration": 120,
+        "timeStart": {
+            "hours": 10,
+            "minutes": 30
+        },
+        "duration": {
+            "hours": 0,
+            "minutes": 30
+        },
         "desc": "Write this fucking app"
     },
     {
         "name": "Evening bath",
-        "timeStart": 1210,
-        "duration": 30,
+        "timeStart": {
+            "hours": 11,
+            "minutes": 0
+        },
+        "duration": {
+            "hours": 0,
+            "minutes": 30
+        },
         "desc": "Clean the fuck your lazy body from the day gunk"
     },
     {
         "name": "Evening procrastination",
-        "timeStart": 1240,
-        "duration": 120,
+        "timeStart": {
+            "hours": 11,
+            "minutes": 30
+        },
+        "duration": {
+            "hours": 0,
+            "minutes": 30
+        },
         "desc": "Finally, get some fucking rest"
     },
     {
         "name": "Sleep",
-        "timeStart": 1350,
-        "duration": 480,
+        "timeStart": {
+            "hours": 12,
+            "minutes": 0
+        },
+        "duration": {
+            "hours": 0,
+            "minutes": 30
+        },
         "desc": "Let's hope mounsieur Esprotéek will not vomit"
     },
 ]

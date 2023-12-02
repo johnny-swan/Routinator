@@ -26,7 +26,7 @@ class RoutineTableViewController: UIViewController {
     }
     
     @IBAction func unwindAddRoutineSegue(segue: UIStoryboardSegue) {
-        print("segue: \(segue.identifier)")
+        print("segue: \(String(describing: segue.identifier))")
     }
 
     @IBAction func unwindAddRoutineDone(segue: UIStoryboardSegue) {
@@ -42,7 +42,7 @@ class RoutineTableViewController: UIViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("preparing for segue: \(segue.identifier)")
+        print("preparing for segue: \(String(describing: segue.identifier))")
         print("segue destination: \(segue.destination)")
         print(segue.destination is EditRoutineViewController)
         print(selectedRoutine ?? "govno")

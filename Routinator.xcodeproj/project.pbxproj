@@ -10,6 +10,7 @@
 		B2170EB72AFC2CA7007FD342 /* debug.json in Resources */ = {isa = PBXBuildFile; fileRef = B2170EB62AFC2CA7007FD342 /* debug.json */; };
 		B2170EBB2AFC3B97007FD342 /* Notificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2170EBA2AFC3B97007FD342 /* Notificator.swift */; };
 		B27999432B0B79000051F4C8 /* EditableChoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27999422B0B79000051F4C8 /* EditableChoreCell.swift */; };
+		B27999482B0F549E0051F4C8 /* TimeStamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27999472B0F549E0051F4C8 /* TimeStamp.swift */; };
 		B2825FC12B00C453007D9DE5 /* RoutineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2825FC02B00C453007D9DE5 /* RoutineTableViewController.swift */; };
 		B2825FC42B0161A0007D9DE5 /* routines.json in Resources */ = {isa = PBXBuildFile; fileRef = B2825FC32B0161A0007D9DE5 /* routines.json */; };
 		B2825FC72B016471007D9DE5 /* RoutineDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2825FC62B016471007D9DE5 /* RoutineDataManager.swift */; };
@@ -33,6 +34,7 @@
 		B2170EB62AFC2CA7007FD342 /* debug.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = debug.json; sourceTree = "<group>"; };
 		B2170EBA2AFC3B97007FD342 /* Notificator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificator.swift; sourceTree = "<group>"; };
 		B27999422B0B79000051F4C8 /* EditableChoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableChoreCell.swift; sourceTree = "<group>"; };
+		B27999472B0F549E0051F4C8 /* TimeStamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStamp.swift; sourceTree = "<group>"; };
 		B2825FC02B00C453007D9DE5 /* RoutineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineTableViewController.swift; sourceTree = "<group>"; };
 		B2825FC32B0161A0007D9DE5 /* routines.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = routines.json; sourceTree = "<group>"; };
 		B2825FC62B016471007D9DE5 /* RoutineDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDataManager.swift; sourceTree = "<group>"; };
@@ -81,9 +83,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B27999462B0F54780051F4C8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B27999472B0F549E0051F4C8 /* TimeStamp.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		B2825FBE2B00C41D007D9DE5 /* Routines */ = {
 			isa = PBXGroup;
 			children = (
+				B27999462B0F54780051F4C8 /* Common */,
 				B27999412B0B78D70051F4C8 /* View */,
 				B2825FBF2B00C430007D9DE5 /* Model */,
 				B2825FC02B00C453007D9DE5 /* RoutineTableViewController.swift */,
@@ -257,6 +268,7 @@
 				B2A123C72AF835B30085D288 /* FutureCellView.swift in Sources */,
 				B2825FCA2B01648D007D9DE5 /* Routine.swift in Sources */,
 				B2825FC12B00C453007D9DE5 /* RoutineTableViewController.swift in Sources */,
+				B27999482B0F549E0051F4C8 /* TimeStamp.swift in Sources */,
 				B2825FD42B041AA0007D9DE5 /* AddRoutineViewController.swift in Sources */,
 				B2170EBB2AFC3B97007FD342 /* Notificator.swift in Sources */,
 				B2A123CC2AF83C430085D288 /* CurrentCellView.swift in Sources */,
@@ -407,6 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 384Q32DSXF;
 				INFOPLIST_FILE = Routinator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -425,6 +438,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 384Q32DSXF;
 				INFOPLIST_FILE = Routinator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

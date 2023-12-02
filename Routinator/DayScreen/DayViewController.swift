@@ -15,7 +15,7 @@ class DayViewController: UIViewController {
     
     let notificator = Notificator()
     
-    let manager = ChoresDataManager(routine: nil, debug: true)
+    let manager = ChoresDataManager(routine: nil, debug: false)
     
     
     
@@ -26,7 +26,7 @@ class DayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+//        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
         manager.fetch()
         currentChore = getCurrentIndex()
         
@@ -36,7 +36,7 @@ class DayViewController: UIViewController {
 
     func setNewChore(oldValue: Int, newValue: Int) {
         print("new chore set\nit was \(oldValue) and now it is \(newValue)")
-        let newChore = manager.chore(atInt: newValue)
+//        let newChore = manager.chore(atInt: newValue)
 //        notificator.createN(task: newChore.name!, timeInterval: 5)
         
     }
@@ -100,26 +100,30 @@ extension DayViewController: UITableViewDataSource {
         let chore = manager.chore(at: indexPath)
         let startTime = chore.timeStart!
         let endTime = chore.timeEnd!
-        if checkIfTimeFitsIn(start: startTime, end: endTime){
-//        if indexPath.row == 2 {
+        if Date().isBetween(from: startTime, to: endTime) {
             if currentChore! != indexPath.row {
-                print("will update current chore")
                 // call the notification
                 
                 // set new current chore
                 currentChore = indexPath.row
-//                scrollToCurrent()
             }
-//            currentChore = indexPath.row
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "currentTask", for: indexPath) as! CurrentCellView
             
             
             cell.lblCaption.text = chore.name
-            cell.lblStartFrom.text = Chore.getTimeString(chore.timeStart)
-            cell.lblFinishAt.text = Chore.getTimeString(chore.timeEnd)
+            cell.lblStartFrom.text = chore.timeStart!.toString(as: .clock)
+            cell.lblFinishAt.text = chore.timeEnd!.toString(as: .clock)
             cell.lblDescription.text = chore.desc
-            cell.lblTimeLeft.text = "time left: \(chore.timeLeft ?? 0) m"
+            
+            var timeLeftString = ""
+            if chore.timeLeft!.minutes > 0 {
+                timeLeftString = "\(chore.timeLeft!.toString(as: .compact)) left"
+            } else {
+                timeLeftString = "ending soon..."
+            }
+            cell.lblTimeLeft.text = timeLeftString
+            
             return cell
         } else {
             
@@ -127,8 +131,8 @@ extension DayViewController: UITableViewDataSource {
             
             
             cell.lblCaption.text = chore.name
-            cell.lblStartFrom.text = Chore.getTimeString(chore.timeStart)
-            cell.lblFinishAt.text = Chore.getTimeString(chore.timeEnd)
+            cell.lblStartFrom.text = chore.timeStart!.toString(as: .clock)
+            cell.lblFinishAt.text = chore.timeEnd!.toString(as: .clock)
             return cell
         }
         
